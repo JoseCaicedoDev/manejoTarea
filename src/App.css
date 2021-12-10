@@ -1,38 +1,99 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+  --color-primary: #808080;
+  --color-secondary: #1CA0F6;
+  --color-white: #FAFAFA;
+  --color-black: #222222;
+
+}
+
+body{
+  max-inline-size: 400px;
+  margin: 0 auto;
+  background: var(--color-white);
+  font-family: 'Roboto', sans-serif;
+  outline: 1px solid red;
+  color: var(--color-black);
+
+}
+.header{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header__title{
+  font-weight: 700;
+  font-size: 2.5rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header__subtitle{
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-primary);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header__search{
+  text-align: center;
+  margin-block: 25px;
 }
-
-.App-link {
-  color: #61dafb;
+.input__search{
+  inline-size: 50%;
+  padding: 8px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 0.5px solid var(--color-secondary);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card__list{
+  list-style: none;
+  padding: 0;
+  margin-inline: 25px;
+  padding-block-end: 3rem;
+}
+.card__item{
+  position: relative;
+  margin-block-start: 25px;
+  border-radius: 5px;
+  background: #8080801f;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.btn__checked{
+  position: absolute;
+  top: 1.2rem;
+  left: .5rem;
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+.btn__checked-active, .btn__checked:hover{
+  color: #12bb36;
+}
+.card__description{
+  padding-inline-start: 3rem;
+  font-size: 1rem;
+  padding-block: 1rem;
+}
+.card__description-active{
+  text-decoration: line-through;
+  color: var(--color-primary);
+}
+.btn__close{
+  position: absolute;
+  right: .5rem;
+  top: -.6rem;
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+.btn__close:hover{
+  color: #fb6161;
+}
+.btn{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-secondary);
+  font-size: 3rem;
+  color: var(--color-white);
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
 }
